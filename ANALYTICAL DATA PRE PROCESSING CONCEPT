@@ -1,0 +1,160 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "5aa36d5c-e422-408e-869d-1314cc18d5d6",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<>:14: SyntaxWarning: invalid escape sequence '\\ '\n",
+      "<>:14: SyntaxWarning: invalid escape sequence '\\ '\n",
+      "C:\\Users\\navee\\AppData\\Local\\Temp\\ipykernel_5804\\1531416351.py:14: SyntaxWarning: invalid escape sequence '\\ '\n",
+      "  print(\"\\ncolumn names:\\ n\", df.columns)\n"
+     ]
+    },
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Data types:\n",
+      " survived          int64\n",
+      "pclass            int64\n",
+      "sex              object\n",
+      "age             float64\n",
+      "sibsp             int64\n",
+      "parch             int64\n",
+      "fare            float64\n",
+      "embarked         object\n",
+      "class          category\n",
+      "who              object\n",
+      "adult_male         bool\n",
+      "deck           category\n",
+      "embark_town      object\n",
+      "alive            object\n",
+      "alone              bool\n",
+      "dtype: object\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\navee\\AppData\\Local\\Temp\\ipykernel_5804\\1531416351.py:14: SyntaxWarning: invalid escape sequence '\\ '\n",
+      "  print(\"\\ncolumn names:\\ n\", df.columns)\n"
+     ]
+    },
+    {
+     "ename": "NameError",
+     "evalue": "name 'describe' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[2], line 8\u001b[0m\n\u001b[0;32m      6\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;124mData types:\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m,df\u001b[38;5;241m.\u001b[39mdtypes)\n\u001b[0;32m      7\u001b[0m \u001b[38;5;66;03m#3. Show basic statistics\u001b[39;00m\n\u001b[1;32m----> 8\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124mBasic statistic:\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m,df,describe(include\u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mall\u001b[39m\u001b[38;5;124m'\u001b[39m))\n\u001b[0;32m      9\u001b[0m \u001b[38;5;66;03m#4.View the first 5 rows\u001b[39;00m\n\u001b[0;32m     10\u001b[0m \u001b[38;5;28mprint\u001b[39m(\u001b[38;5;124m\"\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124mFirst 5 rows:\u001b[39m\u001b[38;5;130;01m\\n\u001b[39;00m\u001b[38;5;124m\"\u001b[39m,df\u001b[38;5;241m.\u001b[39mhead())\n",
+      "\u001b[1;31mNameError\u001b[0m: name 'describe' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import seaborn as sns\n",
+    "#1. Load the Titanic dataset\n",
+    "df=sns.load_dataset('titanic')\n",
+    "#2. Check data types\n",
+    "print(\"Data types:\\n\",df.dtypes)\n",
+    "#3. Show basic statistics\n",
+    "print(\"\\nBasic statistic:\\n\",df,describe(include='all'))\n",
+    "#4.View the first 5 rows\n",
+    "print(\"\\nFirst 5 rows:\\n\",df.head())\n",
+    "#5.Check for missing values\n",
+    "print(\"\\nMissing values:\\n\",df.isnull().sum())\n",
+    "#6. show column names\n",
+    "print(\"\\ncolumn names: n\", df.columns)\n",
+    "#7.Show dataframe info\n",
+    "print(\"\\ndata info:\")\n",
+    "df.info()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f5c888f1-c04f-405c-acc6-1fbca24a85f0",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ea8cce79-9233-472b-b31f-ff659d995aef",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "60813778-604b-449b-9b3d-62cefc6c1989",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d8264f27-5477-46d5-9e2a-d6faf1b3cb5a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5790287f-372e-40aa-adc1-71c633b96b8a",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08d06f5c-9190-46fd-aec7-4ed4169c47a5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f8ce2f77-ee3e-452c-b343-35e0732ca8db",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
